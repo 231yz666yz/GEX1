@@ -1,0 +1,194 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Mansalva', cursive;
+}
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('assets/assets/bg-totoro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-title {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.hero-title h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.hero-video-box {
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    background-color: #a1d9b5;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    z-index: 99;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #71b385;
+}
+
+.movies-section {
+    padding: 60px 20px;
+}
+
+.movies-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-family: 'Mansalva', cursive;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: calc(280px * 5 + 20px * 4); 
+    margin: 0 auto;
+}
+
+.movie-card {
+    width: 280px;
+    height: 420px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+.movie-card:hover .card-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.maestro-section {
+    padding: 60px 20px;
+}
+
+.maestro-section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-family: 'Mansalva', cursive;
+    text-align: center;
+}
+
+.maestro-wrap {
+    display: flex;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.maestro-img {
+    width: 38%;
+    height: auto;
+    display: block;
+}
+
+.quote-box {
+    width: 62%;
+    background-color: #b8e1b0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    transition: background-color 0.3s ease;
+}
+
+.quote-box:hover {
+    background-color: #96d38c;
+}
+
+.quote-box p {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero-video-box {
+        width: 85%;
+    }
+    .maestro-wrap {
+        flex-direction: column;
+    }
+    .maestro-img, .quote-box {
+        width: 100%;
+    }
+}
